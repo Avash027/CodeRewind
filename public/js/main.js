@@ -42,6 +42,13 @@ mainBtn.addEventListener("click", (e) => {
         return b[1] - a[1];
       });
 
+      var lastelem = "";
+      if (list[1][1])
+        lastelem += `The other 2 types of problems that I really liked is 
+      <br> 2 . ${list[1][0]} (solved ${list[1][1]})
+      <br>`;
+      if (list[2][1]) lastelem += `3 . ${list[2][0]} (solved ${list[2][1]})`;
+
       var elem = `<div class="notification is-primary is-bold" style="width:650px" id="divres">
                <h1 class="roboto"> Codeforces-Rewind</h1>
                
@@ -72,11 +79,7 @@ mainBtn.addEventListener("click", (e) => {
                 <br>
                 <hr>
                 <br>
-                The other 2 types of problems that I really liked is 
-                <br>
-                2 . ${list[1][0]} (solved ${list[1][1]})
-                <br>
-                3 . ${list[2][0]} (solved ${list[2][1]})
+               ${lastelem}
                 </div>
                 <br><br>   
                 `;
