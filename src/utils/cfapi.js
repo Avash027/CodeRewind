@@ -18,6 +18,7 @@ const cfapi = (userName, callback) => {
       if (resultArray[i].creationTimeSeconds < 1577840401) {
         break;
       }
+      if (resultArray[i].creationTimeSeconds > 1609415999) continue;
       if (resultArray[i].verdict === "OK") cnt++;
 
       if (lang[resultArray[i].programmingLanguage] !== undefined)
